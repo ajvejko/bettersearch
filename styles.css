@@ -1,0 +1,24 @@
+:root{
+    --color-bg: #111011;
+}
+
+@font-face {
+    font-family: "excali";
+    src: url("/fonts/Virgil.woff2") format("woff2"),
+         url("/fonts/Virgil.woff") format("woff"),
+         url("/fonts/Virgil.ttf") format("truetype");
+    font-weight: normal;
+}
+
+body{
+    background: var(--color-bg);
+    font-family: "excali", sans-serif;
+    color: white;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.div-title{
+    margin-top: 2rem;
+    text-align: center;
+}
