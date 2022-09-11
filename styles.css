@@ -69,6 +69,11 @@ input::placeholder{
     font-family: "excali";
 }
 
+.btn-search:hover, .btn:hover{
+    cursor: pointer;
+}
+
+
 .btn-search:active{
     border-color: white;
 }
