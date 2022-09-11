@@ -46,7 +46,7 @@ input::placeholder{
     background-color: whitesmoke;
     color: gray;
     width: 55%;
-    border-radius: 0.4em;
+    border-radius: 0.2em;
     border-style: none;
     font-size: max(1.3vw, 24px);
 }
