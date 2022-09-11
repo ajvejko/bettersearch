@@ -1,5 +1,6 @@
 :root{
     --color-bg: #111011;
+    --color-special-text: rgb(109, 138, 255);
 }
 
 @font-face {
@@ -18,7 +19,76 @@ body{
     margin: 0;
 }
 
+input::placeholder{
+    font-family: "excali";
+    font-size:  min(2vw, 30px);
+}
+
 .div-title{
-    margin-top: 2rem;
+    margin-top: 5%;
     text-align: center;
+    font-size:  max(3vw, 36px);
+}
+
+.span-bttrsrch{
+    color: var(--color-special-text);
+    font-size:  max(3vw, 36px);
+}
+
+.div-search{
+    margin: 5em auto 2em auto;
+    display: flex;
+    justify-content: center;
+}
+
+.input-search{
+    padding: 0.3em 0.5em;
+    background-color: whitesmoke;
+    color: gray;
+    width: 55%;
+    border-radius: 0.4em;
+    border-style: none;
+    font-size: max(1.3vw, 24px);
+}
+
+.input-search:focus{
+    outline: none;
+}
+
+.btn-search{
+    font-size:  min(3vw, 24px);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: var(--color-special-text);
+    color: white;
+    border-radius: 0.4em;
+    border: 2px solid var(--color-special-text);
+    padding: 0 2em;
+}
+
+.btn-search:active{
+    border-color: white;
+}
+
+.div-websites{
+    margin-left: 21%;
+    margin-top: 3em;
+    font-size: min(3vw, 24px);
+}
+
+.p-search{
+    font-size: 1.4em;
+}
+
+.btn{
+    font-family: "excali";
+    color: white;
+    border: 2px solid;
+    border-color: white;
+    font-size: 0.9em;
+    padding: 0.3em;
+    border-radius: 0.5em;
+    background-color: transparent;
 }

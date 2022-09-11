@@ -2,14 +2,33 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
         <title>Better Search</title>
     </head>
     <body>
     <div class="div-title">
-        Search better <br> with Better Search
+        Search better <br>with <span class="span-bttrsrch">Better Search</span>
     </div>
-    </body>
+    <div class="div-search">
+        <input class="input-search" id="input-search" type="text" placeholder="Searching through everything">
+    </div>
+    <button id="search" class="btn-search" onclick="search()">Search</button>
+    <div class="div-websites">
+        <p class="p-search">Search website:</p>
+        <button class="btn" id="Reddit" onclick="keepColor(this.id)">
+            Reddit
+        </button>
+        <button class="btn" id="Stackoverflow" onclick="keepColor(this.id)">
+            Stackoverflow
+        </button>
+        <button class="btn" id="Youtube" onclick="keepColor(this.id)">
+            Youtube
+        </button>
+        <button class="btn" id="Github" onclick="keepColor(this.id)">
+            Github
+        </button>
+    </div>
+    <script src="index.js"></script> 
+    </body> 
 </html>
