@@ -45,7 +45,7 @@ input::placeholder{
 .input-search{
     padding: 0.3em 0.5em;
     background-color: whitesmoke;
-    color: gray;
+    color: black;
     width: 55%;
     border-radius: 0.2em;
     border-style: none;
