@@ -24,11 +24,18 @@ function keepColor(btn){
 
 function search() {
     let search = document.getElementById("input-search").value;
-    search += ` site:${web}.com`;
+    //if field is empty AND website is selected
+    if(web === "youtube"){
+        window.open("https://www.youtube.com/results?search_query="+search);
+    } else {
+        //adds expression to limit results
+        search += ` site:${web}.com`;
+        window.open("https://google.com/search?q="+search);
+    }
     //if no specific web is searched
-    if(web === "")
-    search = document.getElementById("input-search").value;;
-    window.open("http://google.com/search?q="+search);
+    if(web === ""){
+        search = document.getElementById("input-search").value;
+    }   
 }
 
 document.body.onkeydown = function(e){
