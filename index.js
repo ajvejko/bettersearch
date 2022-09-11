@@ -30,3 +30,9 @@ function search() {
     search = document.getElementById("input-search").value;;
     window.open("http://google.com/search?q="+search);
 }
+
+document.body.onkeydown = function(e){
+    if(e.keyCode == 13){
+        search();
+    }
+}
