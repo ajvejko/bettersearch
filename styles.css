@@ -17,6 +17,7 @@ body{
     color: white;
     font-size: 1rem;
     margin: 0;
+    user-select: none;
 }
 
 input::placeholder{
