@@ -17,25 +17,28 @@ const newLink = (term) =>{
         github:{
             homeURL:"https://github.com",
             searchURL:`https://www.google.com/search?q=${term} site:github.com`
+        },
+        google:{
+            searchURL:`https://www.google.com/search?q=${term}`
         }
     }
     return links;
 }
 function keepColor(btn){
     const button = document.getElementById(btn);
-    const borderColor = window.getComputedStyle(button).borderColor; 
-    web = button.id;
+    const borderColor = window.getComputedStyle(button).borderColor;    
     //Changes border color of last button if another pressed
     if(lastbutton != null)
     lastbutton.style.borderColor = "rgb(255, 255, 255)";
-    //Changes color properly
+    //Changes color and placeholder text properly
     if(borderColor === "rgb(255, 255, 255)"){
         button.style.borderColor = "rgb(109, 138, 255)";
         document.getElementById("input-search").placeholder = `Searching through ${btn}`;
+        web = button.id;
     } else {
         button.style.borderColor = "rgb(255, 255, 255)"
         document.getElementById("input-search").placeholder = "Searching through everything";
-        web = "";
+        web = undefined;
     }
     //store the previous button, used for border removal
     lastbutton = document.getElementById(btn);
@@ -44,6 +47,10 @@ function keepColor(btn){
 function search() {
     term = document.getElementById("input-search").value;
     const searchterm = newLink(term);
+    //if no button is selected, just google
+    if(web === undefined)
+    return window.open(searchterm.google.searchURL, "_self");
+    //if term is empty, search homeURL else use searchURL
     term === "" ? window.open(searchterm[web].homeURL, "_self")
     : window.open(searchterm[web].searchURL, "_self");
 }
