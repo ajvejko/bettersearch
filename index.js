@@ -29,13 +29,12 @@ function keepColor(btn){
     if(lastbutton != null)
     lastbutton.style.borderColor = "rgb(255, 255, 255)";
     //Changes color properly
-    borderColor === "rgb(255, 255, 255)" ? button.style.borderColor = "rgb(109, 138, 255)"  
-    : button.style.borderColor = "rgb(255, 255, 255)";
-    //Changes placeholder text
-    if(borderColor != "rgb(109, 138, 255)"){
+    if(borderColor === "rgb(255, 255, 255)"){
+        button.style.borderColor = "rgb(109, 138, 255)";
         document.getElementById("input-search").placeholder = `Searching through ${btn}`;
     } else {
-        document.getElementById("input-search").placeholder = "Searching through everything"
+        button.style.borderColor = "rgb(255, 255, 255)"
+        document.getElementById("input-search").placeholder = "Searching through everything";
         web = "";
     }
     //store the previous button, used for border removal
