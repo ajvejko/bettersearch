@@ -26,6 +26,11 @@ const newLink = (term) =>{
     }
     return links;
 }
+
+window.onload = function(){
+    document.getElementById("input-search").focus();
+}
+
 function keepColor(btn){
     const button = document.getElementById(btn);
     const borderColor = window.getComputedStyle(button).borderColor;    
