@@ -47,15 +47,15 @@ function keepColor(btn){
     lastbutton = document.getElementById(btn);
 }
 
-function search() {
+function search(){
     term = document.getElementById("input-search").value;
     const searchterm = newLink(term);
     //if no button is selected, just google
     if(!web)
     return window.open(searchterm.google.searchURL, "_self");
     //if term is empty, search homeURL else use searchURL
-    !term ? window.open(searchterm[web].homeURL, "_self")
-    : window.open(searchterm[web].searchURL, "_self");
+   !term ? window.open(searchterm[web].homeURL, "_self")
+   : window.open(searchterm[web].searchURL, "_self");
 }
 
 document.body.onkeydown = function(e){

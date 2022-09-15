@@ -57,21 +57,7 @@ input::placeholder{
     outline: none;
 }
 
-.btn-search{
-    font-size:  min(3vw, 24px);
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    background-color: var(--color-special-text);
-    color: white;
-    border-radius: 0.4em;
-    border: 2px solid var(--color-special-text);
-    padding: 0 2em;
-    font-family: "excali";
-}
-
-.btn-search:hover, .btn:hover{
+.btn:hover{
     cursor: pointer;
 }
 
