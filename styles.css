@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: "excali";
-    src: url("../bettersearch/fonts/Virgil.woff2") format("woff2"),
+    src: url("fonts/Virgil.woff2") format("woff2"),
          url("../bettersearch/fonts/fonts/Virgil.woff") format("woff"),
          url("../bettersearch/fonts/fonts/Virgil.ttf") format("truetype");
     font-weight: normal;
@@ -46,7 +46,7 @@ input::placeholder{
     padding: 0.3em 0.5em;
     background-color: whitesmoke;
     color: black;
-    width: 55%;
+    width: 70%;
     border-radius: 0.2em;
     border-style: none;
     font-size: max(1.3vw, 24px);
@@ -67,7 +67,7 @@ input::placeholder{
 }
 
 .div-websites{
-    margin-left: 21%;
+    margin-left: 14%;
     margin-top: 3em;
     font-size: min(3vw, 24px);
 }
@@ -85,4 +85,20 @@ input::placeholder{
     padding: 0.3em;
     border-radius: 0.5em;
     background-color: transparent;
+}
+
+.span-links{
+    position: absolute;
+    right: 1%;
+    bottom: 1%;
+    font-family: "excali";
+}
+
+.a-links{
+    text-decoration: none;
+    color: white;
+}
+
+.a-links:hover{
+    color: var(--color-special-text);
 }
