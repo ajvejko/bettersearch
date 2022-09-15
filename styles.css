@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: "excali";
-    src: url("fonts/Virgil.woff2") format("woff2"),
+    src: url("../bettersearch/fonts/Virgil.woff2") format("woff2"),
          url("../bettersearch/fonts/fonts/Virgil.woff") format("woff"),
          url("../bettersearch/fonts/fonts/Virgil.ttf") format("truetype");
     font-weight: normal;
