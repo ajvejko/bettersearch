@@ -58,6 +58,10 @@ function search(){
    : window.open(searchTerm[web].searchURL, "_self");
 }
 
+function addShortcut(){
+    
+}
+
 document.body.onkeydown = function(e){
     if(e.keyCode == 13){
         search();

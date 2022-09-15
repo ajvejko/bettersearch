@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: "excali";
-    src: url("../bettersearch/fonts/Virgil.woff2") format("woff2"),
+    src: url("fonts/Virgil.woff2") format("woff2"),
          url("../bettersearch/fonts/fonts/Virgil.woff") format("woff"),
          url("../bettersearch/fonts/fonts/Virgil.ttf") format("truetype");
     font-weight: normal;
@@ -26,7 +26,7 @@ input::placeholder{
 }
 
 .div-title{
-    margin-top: 5%;
+    margin-top: 3%;
     text-align: center;
     font-size:  max(3vw, 36px);
 }
@@ -66,14 +66,30 @@ input::placeholder{
     border-color: white;
 }
 
-.div-websites{
-    margin-left: 14%;
+.div-all{
+    display: flex;
+    outline: 2px salmon solid;
     margin-top: 3em;
-    font-size: min(3vw, 24px);
 }
 
-.p-search{
+.div-websites{
+    text-align: left;
+    width: 30%;
+    margin-left: 14%;
+    font-size: min(1.5vw, 2em);
+    outline: 2px red solid;
+}
+
+.div-head{
     font-size: 1.4em;
+}
+
+.div-shortcuts{
+    text-align: right;
+    width: 30%;
+    margin-left: 12%;
+    font-size: min(1.5vw, 2em);
+    outline: 2px green solid;
 }
 
 .btn{
