@@ -1,6 +1,6 @@
-let web, term, lastbutton;
-const white = "rgb(255, 255, 255)";
-const blue = "rgb(109, 138, 255)";
+let web, term, lastButton;
+const WHITE = "rgb(255, 255, 255)";
+const BLUE = "rgb(109, 138, 255)";
 const newLink = (term) =>{
     const links =  
     {
@@ -31,31 +31,31 @@ function keepColor(btn){
     const button = document.getElementById(btn);
     const borderColor = window.getComputedStyle(button).borderColor;    
     //Changes border color of last button if another pressed
-    if(lastbutton)
-    lastbutton.style.borderColor = white;
+    if(lastButton)
+    lastButton.style.borderColor = WHITE;
     //Changes color and placeholder text properly
-    if(borderColor === white){
-        button.style.borderColor = blue;
+    if(borderColor === WHITE){
+        button.style.borderColor = BLUE;
         document.getElementById("input-search").placeholder = `Searching through ${btn}`;
         web = button.id;
     } else {
-        button.style.borderColor = white;
+        button.style.borderColor = WHITE;
         document.getElementById("input-search").placeholder = "Searching through everything";
         web = undefined;
     }
     //store the previous button, used for border removal
-    lastbutton = document.getElementById(btn);
+    lastButton = document.getElementById(btn);
 }
 
 function search(){
     term = document.getElementById("input-search").value;
-    const searchterm = newLink(term);
+    const searchTerm = newLink(term);
     //if no button is selected, just google
     if(!web)
-    return window.open(searchterm.google.searchURL, "_self");
+    return window.open(searchTerm.google.searchURL, "_self");
     //if term is empty, search homeURL else use searchURL
-   !term ? window.open(searchterm[web].homeURL, "_self")
-   : window.open(searchterm[web].searchURL, "_self");
+   !term ? window.open(searchTerm[web].homeURL, "_self")
+   : window.open(searchTerm[web].searchURL, "_self");
 }
 
 document.body.onkeydown = function(e){
