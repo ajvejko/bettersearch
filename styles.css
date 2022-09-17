@@ -68,7 +68,6 @@ input::placeholder{
 
 .div-all{
     display: flex;
-    outline: 2px salmon solid;
     margin-top: 3em;
 }
 
