@@ -1,32 +1,6 @@
 let web, term, lastButton;
 const WHITE = "rgb(255, 255, 255)";
 const BLUE = "rgb(109, 138, 255)";
-const newLink = (term) =>{
-    const links =  
-    {
-        reddit:{
-            homeURL:"https://www.reddit.com",
-            searchURL:`https://www.google.com/search?q=${term} site:reddit.com`
-        },
-        stackoverflow:{
-            homeURL:"https://stackoverflow.com",
-            searchURL:`https://www.google.com/search?q=${term} site:stackoverflow.com`
-        },
-        youtube:{
-            homeURL:"https://youtube.com",
-            searchURL:`https://www.youtube.com/results?search_query=${term}`
-        },
-        github:{
-            homeURL:"https://github.com",
-            searchURL:`https://www.google.com/search?q=${term} site:github.com`
-        },
-        google:{
-            searchURL:`https://www.google.com/search?q=${term}`
-        }
-    }
-    return links;
-}
-
 function keepColor(btn){
     const button = document.getElementById(btn);
     const borderColor = window.getComputedStyle(button).borderColor;    
@@ -57,7 +31,16 @@ function search(){
    !term ? window.open(searchTerm[web].homeURL, "_self")
    : window.open(searchTerm[web].searchURL, "_self");
 }
-
+function addSearch(){
+    const element = document.createElement("button");
+    element.type = "button";
+    element.innerHTML = "test";
+    element.name = "testName";
+    element.id = "testId";
+    element.className = "btn";
+    const foo = document.getElementById("button-web-add");
+    foo.before(element);
+}
 function addShortcut(){
     
 }

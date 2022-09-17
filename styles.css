@@ -57,15 +57,6 @@ input::placeholder{
     outline: none;
 }
 
-.btn:hover{
-    cursor: pointer;
-}
-
-
-.btn-search:active{
-    border-color: white;
-}
-
 .div-all{
     display: flex;
     margin-top: 3em;
@@ -78,7 +69,11 @@ input::placeholder{
     font-size: min(1.5vw, 2em);
 }
 
-.div-head{
+.div-websites>button{
+    float: left;
+}
+
+.div-search-head, .div-shortcut-head{
     font-size: 1.4em;
 }
 
@@ -89,16 +84,29 @@ input::placeholder{
     font-size: min(1.5vw, 2em);
 }
 
+.div-shortcuts>button{
+    float: right;
+}
+
 .btn{
     font-family: "excali";
     color: white;
     border: 2px solid;
     border-color: white;
     font-size: 0.9em;
-    margin-top: 0.5em;
+    margin: 0.5em 0.5em 0 0;
     padding: 0.3em;
     border-radius: 0.5em;
     background-color: transparent;
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+
+.btn-search:active{
+    border-color: white;
 }
 
 .span-links{
@@ -115,4 +123,8 @@ input::placeholder{
 
 .a-links:hover{
     color: var(--color-special-text);
+}
+
+.div-popup{
+    position: absolute;
 }
