@@ -8,10 +8,10 @@ Currently working on:
 Custom Shortcuts and Search websites. (You can see "Add Button"(+), but not functional yet).
 
 TO-DO:
-Custom Shortcuts and Search websites (WIP),
-Custom Background Option,
-Custom Highlight Color,
-Custom button Color,
-Make borders look closer to excalidraw, currently only font,
-New-Tab extension
-Option to either keep or close current TAB on Search
+Custom Shortcuts and Search websites (WIP), <br />
+Custom Background Option, <br />
+Custom Highlight Color, <br />
+Custom button Color, <br />
+Make borders look closer to excalidraw, currently only font, <br />
+New-Tab extension <br />
+Option to either keep or close current TAB on Search <br />
