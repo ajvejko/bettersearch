@@ -13,5 +13,5 @@ Custom Background Option, <br />
 Custom Highlight Color, <br />
 Custom button Color, <br />
 Make borders look closer to excalidraw, currently only font, <br />
-New-Tab extension <br />
+New-Tab extension, <br />
 Option to either keep or close current TAB on Search <br />
