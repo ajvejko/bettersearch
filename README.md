@@ -7,7 +7,7 @@ Using googles feature like site:"siteName" to get search results from only selec
 Currently working on:
 Custom Shortcuts and Search websites. (You can see "Add Button"(+), but not functional yet).
 
-TO-DO:
+TO-DO: <br />
 Custom Shortcuts and Search websites (WIP), <br />
 Custom Background Option, <br />
 Custom Highlight Color, <br />
