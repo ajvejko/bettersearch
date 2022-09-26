@@ -43,7 +43,7 @@ function buildbuttons({name}){
     addedButton.innerText = name;
     addedButton.id = name;
     addedButton.className = "btn";
-    addedButton.onClick = function(){keepColor(this.id)};
+    addedButton.onclick = function(){keepColor(addedButton.id)};
     document.getElementById("web").before(addedButton);
 }
 //opens the popup
