@@ -22,25 +22,16 @@ function keepColor(btn){
 }
 
 function search(){
+    let links = JSON.parse(localStorage.getItem("links")) || [];
     term = document.getElementById("input-search").value;
     const searchTerm = newLink(term);
     //if no button is selected, just google
     if(!web)
-    return window.open(searchTerm.google.searchURL, "_self");
+        return window.open(searchTerm.google.searchURL, "_self");
     //if term is empty, search homeURL else use searchURL
    !term ? window.open(searchTerm[web].homeURL, "_self")
    : window.open(searchTerm[web].searchURL, "_self");
 }
-/* function addSearch(){
-    const element = document.createElement("button");
-    element.type = "button";
-    element.innerHTML = "test";
-    element.name = "testName";
-    element.id = "testId";
-    element.className = "btn";
-    const foo = document.getElementById("button-web-add");
-    foo.before(element);
-} */
 
 document.body.onkeydown = function(e){
     if(e.keyCode == 13){
