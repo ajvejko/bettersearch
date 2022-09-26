@@ -31,7 +31,7 @@ function search(){
    !term ? window.open(searchTerm[web].homeURL, "_self")
    : window.open(searchTerm[web].searchURL, "_self");
 }
-function addSearch(){
+/* function addSearch(){
     const element = document.createElement("button");
     element.type = "button";
     element.innerHTML = "test";
@@ -40,10 +40,7 @@ function addSearch(){
     element.className = "btn";
     const foo = document.getElementById("button-web-add");
     foo.before(element);
-}
-function addShortcut(){
-    
-}
+} */
 
 document.body.onkeydown = function(e){
     if(e.keyCode == 13){

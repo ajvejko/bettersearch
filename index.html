@@ -19,12 +19,12 @@
 <div class="div-all">
     <div class="div-websites" id="div-websites">
 <div class="div-search-head" id="div-search-head">Search website</div>
-        <button class="btn" id="button-web-add" onclick="addSearch()">+</button>
+        <button class="btn" id="web" onclick="addpopup(this.id)">+</button>
     </div>
     
     <div class="div-shortcuts">
         <div class="div-shortcut-head" id="div-shortcut-head">Shortcuts</div>
-        <button class="btn" id="button-short-add" onclick="addShortcut(this.id)">+</button>
+        <button class="btn" id="shortcut" onclick="addpopup(this.id)">+</button>
     </div>
 </div>
 
@@ -33,19 +33,20 @@
         <span>|</span>
         <a class="a-links" href="#nothing-yet">portfolio</a>
     </span>
-<div class="div-popup-bg">
+<div class="div-popup-bg" id="div-popup-bg">
     <div class="div-popup">
-        <div class="div-popup-title">Add Search</div>
+        <div class="div-popup-title" id="div-popup-title">Add Search</div>
         <div class="div-input-titles">Name of the Button:</div>
         <input class="input-text input-add" id="input-add-name" type="text" placeholder="Button Name">
         <div class="div-input-titles">URL:</div>
         <input class="input-text input-add" id="input-add-link" type="text" placeholder="Link to the site">
         <div class="div-input-titles">Search Link:</div>
         <input class="input-text input-add" id="input-add-search" type="text" placeholder="Link to the search">
-        <button class="input-button" id="button-popup-add">Add</button>
+        <button class="input-button" id="button-popup-add" onclick="addbutton" >Add</button>
     </div>
 </div>
     </body> 
 </section>
 </html>
 <script src="index.js"></script> 
+<script src="addbutton.js"></script>
