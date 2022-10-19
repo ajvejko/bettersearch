@@ -70,9 +70,11 @@ function addbutton(btn){
     addedButton.innerText = name;
     addedButton.id = name;
     addedButton.className = 'btn';
+    //NOTE: This does work, but only on reload, will have to look into that. Also make search() work again.
+    //      Look into how to search in Objects again and it should be ezpz to make search() work with dynamic buttons.
+    addedButton.addEventListener('click',keepColor,false);
     document.getElementById('web').before(addedButton)
     document.getElementById('div-popup-bg').style.display = 'none';
-    console.log(buttonType);
     links.push({
         name,
         homeURL,
