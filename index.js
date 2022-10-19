@@ -1,7 +1,7 @@
-let links = JSON.parse(localStorage.getItem("links")) || [];
+let links = JSON.parse(localStorage.getItem('links')) || [];
 let web, term, lastButton;
-const WHITE = "rgb(255, 255, 255)";
-const BLUE = "rgb(109, 138, 255)";
+const WHITE = 'rgb(255, 255, 255)';
+const BLUE = 'rgb(109, 138, 255)';
 //runs buildbuttons function on load
 window.onload = function(){
     links.forEach(buildbuttons);
@@ -16,11 +16,11 @@ function keepColor(btn){
     //Changes color and placeholder text properly
     if(borderColor === WHITE){
         button.style.borderColor = BLUE;
-        document.getElementById("input-search").placeholder = `Searching through ${btn}`;
+        document.getElementById('input-search').placeholder = `Searching through ${btn}`;
         web = button.id;
     } else {
         button.style.borderColor = WHITE;
-        document.getElementById("input-search").placeholder = "Searching through everything";
+        document.getElementById('input-search').placeholder = 'Searching through everything';
         web = undefined;
     }
     //store the previous button, used for border removal
@@ -28,57 +28,57 @@ function keepColor(btn){
 }
 //function to search
 function search(){
-    term = document.getElementById("input-search").value;
+    term = document.getElementById('input-search').value;
     const searchTerm = newLink(term);
     //if no button is selected, just google
     if(!web)
-        return window.open(searchTerm.google.searchURL, "_self");
+        return window.open(searchTerm.google.searchURL, '_self');
     //if term is empty, search homeURL else use searchURL
-   !term ? window.open(searchTerm[web].homeURL, "_self")
-   : window.open(searchTerm[web].searchURL, "_self");
+   !term ? window.open(searchTerm[web].homeURL, '_self')
+   : window.open(searchTerm[web].searchURL, '_self');
 }
 //builds buttons on load up
 function buildbuttons({name}){
-    const addedButton = document.createElement("button");
+    const addedButton = document.createElement('button');
     addedButton.innerText = name;
     addedButton.id = name;
-    addedButton.className = "btn";
+    addedButton.className = 'btn';
     addedButton.onclick = function(){keepColor(addedButton.id)};
-    document.getElementById("web").before(addedButton);
+    document.getElementById('web').before(addedButton);
 }
 //opens the popup
 function addpopup(btn){
     const buttonType = document.getElementById(btn);
-    let popupTitle = document.getElementById("div-popup-title");
-    document.getElementById("div-popup-bg").style.display = "flex";
-    if(buttonType.id == "shortcut"){
-        popupTitle.innerHTML = "Add Shortcut";
-        popupTitle.innerHTML = popupTitle.innerHTML.replace(/Shortcut/, "<span style='color:rgb(109, 138, 255)'>Shortcut</span>" );
+    let popupTitle = document.getElementById('div-popup-title');
+    document.getElementById("div-popup-bg").style.display = 'flex';
+    if(buttonType.id == 'shortcut'){
+        popupTitle.innerHTML = 'Add Shortcut';
+        popupTitle.innerHTML = popupTitle.innerHTML.replace(/Shortcut/, '<span style="color:rgb(109, 138, 255)">Shortcut</span>' );
     } else {
-        popupTitle.innerHTML = "Add Search"
-        popupTitle.innerHTML = popupTitle.innerHTML.replace(/Search/, "<span style='color:rgb(109, 138, 255)'>Search</span>" );
+        popupTitle.innerHTML = 'Add Search';
+        popupTitle.innerHTML = popupTitle.innerHTML.replace(/Search/, '<span style="color:rgb(109, 138, 255)">Search</span>' );
     }
 }
 
 //adds new button
 function addbutton(btn){
     const buttonType = document.getElementById(btn);
-    const name = document.getElementById("input-add-name").value;
-    const homeURL = document.getElementById("input-add-link").value;
-    const searchURL = document.getElementById("input-add-search").value;
-    const addedButton = document.createElement("button");
+    const name = document.getElementById('input-add-name').value;
+    const homeURL = document.getElementById('input-add-link').value;
+    const searchURL = document.getElementById('input-add-search').value;
+    const addedButton = document.createElement('button');
     addedButton.innerText = name;
     addedButton.id = name;
-    addedButton.className = "btn";
-    document.getElementById("web").before(addedButton)
-    document.getElementById("div-popup-bg").style.display = "none";
+    addedButton.className = 'btn';
+    document.getElementById('web').before(addedButton)
+    document.getElementById('div-popup-bg').style.display = 'none';
     console.log(buttonType);
     links.push({
         name,
         homeURL,
         searchURL,
     })
-    localStorage.setItem("links", JSON.stringify(links));
+    localStorage.setItem('links', JSON.stringify(links));
     console.log(links);
 }
 //enter press
