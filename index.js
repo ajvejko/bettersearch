@@ -29,13 +29,16 @@ function keepColor(btn){
 //function to search
 function search(){
     term = document.getElementById('input-search').value;
-    const searchTerm = newLink(term);
-    //if no button is selected, just google
-    if(!web)
-        return window.open(searchTerm.google.searchURL, '_self');
-    //if term is empty, search homeURL else use searchURL
-   !term ? window.open(searchTerm[web].homeURL, '_self')
-   : window.open(searchTerm[web].searchURL, '_self');
+    const pressed = web;
+    //Loop through links array to find the proper link that is pressed.
+    for(let i = 0; i <= links.length - 1; i++){
+        if(links[i].name === web){
+            const searchTerm = links[i].searchURL + term};
+            const searchHome = links[i].homeURL;
+        if(term === ""){
+            window.open(searchHome, '_self');
+        } else{window.open(searchTerm,'_self');}
+    }
 }
 //builds buttons on load up
 function buildbuttons({name}){
@@ -68,10 +71,10 @@ function addbutton(btn){
     const searchURL = document.getElementById('input-add-search').value;
     const addedButton = document.createElement('button');
     addedButton.innerText = name;
+
     addedButton.id = name;
     addedButton.className = 'btn';
-    //NOTE: This does work, but only on reload, will have to look into that. Also make search() work again.
-    //      Look into how to search in Objects again and it should be ezpz to make search() work with dynamic buttons.
+    //NOTE: This does work, but only on reload, will have to look into that.
     addedButton.addEventListener('click',keepColor,false);
     document.getElementById('web').before(addedButton)
     document.getElementById('div-popup-bg').style.display = 'none';
@@ -81,7 +84,6 @@ function addbutton(btn){
         searchURL,
     })
     localStorage.setItem('links', JSON.stringify(links));
-    console.log(links);
 }
 //enter press
 document.body.onkeydown = function(e){
