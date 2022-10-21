@@ -29,15 +29,20 @@ function keepColor(btn){
 //function to search
 function search(){
     term = document.getElementById('input-search').value;
-    const pressed = web;
+    if(web === undefined){
+        console.log('kekel');
+        window.open(`https://www.google.com/search?q=${term}`,'_self');
+    }
     //Loop through links array to find the proper link that is pressed.
     for(let i = 0; i <= links.length - 1; i++){
         if(links[i].name === web){
-            const searchTerm = links[i].searchURL + term};
+            const searchTerm = links[i].searchURL + term;
             const searchHome = links[i].homeURL;
+        
         if(term === ""){
             window.open(searchHome, '_self');
-        } else{window.open(searchTerm,'_self');}
+        }else{window.open(searchTerm,'_self');}
+        }
     }
 }
 //builds buttons on load up
@@ -71,7 +76,6 @@ function addbutton(btn){
     const searchURL = document.getElementById('input-add-search').value;
     const addedButton = document.createElement('button');
     addedButton.innerText = name;
-
     addedButton.id = name;
     addedButton.className = 'btn';
     //NOTE: This does work, but only on reload, will have to look into that.
