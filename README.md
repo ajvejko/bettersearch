@@ -5,10 +5,10 @@ Using googles feature like site:"siteName" to get search results from only selec
 - Project started on Vanilla JS and is my first project and is planned to be maintained and updated later to React and TypeScript as I personally use this as a replacement to the Home Screen. FireFox currently does not allow custom sites on new tab and I am using an extension for that, but later will write my own.
 
 Currently working on:<br />
-Custom Shortcuts and Search websites. (You can see "Add Button"(+), but not functional yet).
+Improving adding custom buttons + need to add a way to delete individual buttons without dev tools.
 
 TO-DO: <br />
-Custom Shortcuts and Search websites (WIP), <br />
+Improvements to custom buttons(WIP), <br />
 Custom Background Option, <br />
 Custom Highlight Color, <br />
 Custom button Color, <br />
